@@ -1,0 +1,9 @@
+{
+  "builds": [
+    { "src": "build/index.mjs", "use": "@vercel/node" },
+    { "src": "package.json", "use": "pnpm build" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "build/index.mjs" }
+  ]
+}
