@@ -14,11 +14,10 @@
     "node": "^16 || ^18 || ^19"
   },
   "scripts": {
-    "start": "node ./src/index.ts",
+    "start": "esno ./src/index.ts",
     "dev": "esno watch ./src/index.ts",
     "prod": "node ./build/index.mjs",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "pnpm clean && tsup",
     "clean": "rimraf build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
